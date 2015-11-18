@@ -29,7 +29,7 @@
     } else if ([matches count]) {
         photo = [matches firstObject];
     } else {
-        [NSEntityDescription insertNewObjectForEntityForName:@"Photo"
+        photo = [NSEntityDescription insertNewObjectForEntityForName:@"Photo"
                                       inManagedObjectContext:context];
         photo.unique = unique;
         photo.title = [photoDictionary valueForKeyPath:FLICKR_PHOTO_TITLE];
@@ -40,7 +40,7 @@
         photo.whoTook = [Photographer photographerWithName:photographerName
                                     inManagedObjectContext:context];
     }
-    
+    NSLog(@"photo.whoTook.photos.count: %lu", photo.whoTook.photos.count);
     return photo;
 }
 

@@ -45,7 +45,9 @@
     Photographer *photographer = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.textLabel.text = photographer.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu photos", [photographer.photos count]];
+    NSSet<Photo *> *photos = photographer.photos;
+    NSUInteger count = [photos count];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu photos", count];
     
     return cell;
 }

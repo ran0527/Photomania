@@ -54,6 +54,7 @@
         sessionConfig.timeoutIntervalForRequest = BACKGROUND_FLICKR_FETCH_TIMEOUT; // want to be a good background citizen!
         NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfig];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[FlickrFetcher URLforRecentGeoreferencedPhotos]];
+        NSLog(@"request: %@", request);
         NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request
                                                         completionHandler:^(NSURL *localFile, NSURLResponse *response, NSError *error) {
                                                             if (error) {
@@ -93,7 +94,7 @@
         // this timer will fire only when we are in the foreground
         self.flickrForegroundFetchTimer = [NSTimer scheduledTimerWithTimeInterval:FOREGROUND_FLICKR_FETCH_INTERVAL
                                                                            target:self
-                                                                         selector:@selector(startFlickrFetch:)
+                                                                         selector:@selector(startFlickrFetch)
                                                                          userInfo:nil
                                                                           repeats:YES];
     }
