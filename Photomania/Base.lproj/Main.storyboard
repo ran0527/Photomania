@@ -27,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NJZ-3T-Uav">
@@ -35,7 +35,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -43,7 +43,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="uOv-ra-aJ5" kind="push" id="gdo-lJ-AFh"/>
+                                    <segue destination="eEO-IE-1Sz" kind="push" id="Je0-oF-hJa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,7 +56,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iw4-pC-ES6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="199" y="567"/>
+            <point key="canvasLocation" x="193" y="159"/>
         </scene>
         <!--Shutterbug-->
         <scene sceneID="8WH-7h-mlh">
@@ -69,7 +69,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Photo Cell" textLabel="8NK-Wj-VDq" detailTextLabel="Gbq-bj-PVf" style="IBUITableViewCellStyleSubtitle" id="rZ9-q7-wzf">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rZ9-q7-wzf" id="4ok-y0-Ozc">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -80,7 +80,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gbq-bj-PVf">
@@ -88,7 +88,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -109,7 +109,43 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coF-z9-eKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967" y="567"/>
+            <point key="canvasLocation" x="939" y="159"/>
+        </scene>
+        <!--Photos By Photographer Map View Controller-->
+        <scene sceneID="AVT-cS-ePb">
+            <objects>
+                <viewController id="eEO-IE-1Sz" customClass="PhotosByPhotographerMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9J5-bF-ybd"/>
+                        <viewControllerLayoutGuide type="bottom" id="pZc-mh-tYC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nyU-F7-uIZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iLY-r1-Qhf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iLY-r1-Qhf" firstAttribute="leading" secondItem="nyU-F7-uIZ" secondAttribute="leading" id="Elh-ED-vev"/>
+                            <constraint firstItem="iLY-r1-Qhf" firstAttribute="top" secondItem="nyU-F7-uIZ" secondAttribute="top" id="YZh-E9-O71"/>
+                            <constraint firstAttribute="trailing" secondItem="iLY-r1-Qhf" secondAttribute="trailing" id="nvR-Dt-dVO"/>
+                            <constraint firstItem="iLY-r1-Qhf" firstAttribute="bottom" secondItem="pZc-mh-tYC" secondAttribute="top" id="p3b-Ly-xau"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hAn-lU-rZw"/>
+                    <connections>
+                        <outlet property="mapView" destination="iLY-r1-Qhf" id="Bfo-Rr-FYG"/>
+                        <segue destination="hLy-Uc-7Th" kind="push" identifier="Show Photo" id="y2h-yZ-lVA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2g-s4-mlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939" y="936"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="a4I-W8-gZ0">
@@ -152,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQO-bN-nhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768" y="567"/>
+            <point key="canvasLocation" x="1728" y="159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V2m-f3-p1R">
@@ -171,7 +207,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwh-5A-LhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-539" y="567"/>
+            <point key="canvasLocation" x="-541" y="159"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="y2h-yZ-lVA"/>
+    </inferredMetricsTieBreakers>
 </document>
