@@ -55,6 +55,8 @@
                                                                     dispatch_async(dispatch_get_main_queue(), ^{ self.image = image; });
                                                                     [self performSelectorOnMainThread:@selector(setImage:) withObject:image waitUntilDone:NO];
                                                                 }
+                                                            } else {
+                                                                NSLog(@"load error: %@", error);
                                                             }
                                                         }];
         [task resume];
